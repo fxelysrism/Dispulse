@@ -89,8 +89,8 @@ function Work() {
       </div>
 
       <div className="work-grid">
-        {projects.map((project, index) => (
-          <div key={index} className="work-card">
+        {projects.map((project) => (
+          <div key={project.client} className="work-card">
             {project.banner ? (
               <div className="work-banner">
                 <img src={project.banner} alt={`${project.client} banner`} className="work-banner-image" />
@@ -110,8 +110,8 @@ function Work() {
               <div className="work-results">
                 <h4 className="results-title">Results:</h4>
                 <ul className="results-list">
-                  {project.results.map((result, idx) => (
-                    <li key={idx}>{result}</li>
+                  {project.results.map((result) => (
+                    <li key={result}>{result}</li>
                   ))}
                 </ul>
               </div>
